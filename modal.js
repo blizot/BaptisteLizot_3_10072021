@@ -21,7 +21,7 @@ function launchModal() {
 }
 
 // close modal
-const modalCloseButton = document.getElementsByClassName("close")[0];
+const modalCloseButton = document.getElementById("closeModal");
 modalCloseButton.addEventListener("click", () => {
   modalbg.style.display = "none";
 });
