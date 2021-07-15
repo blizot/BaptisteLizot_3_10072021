@@ -2,7 +2,7 @@
 <html lang="fr">
   	<head>
     	<meta charset="utf-8" />
-    	<title>Reservation</title>
+    	<title>Réservation</title>
 
     	<meta name="viewport" content="width=device-width,initial-scale=1" />
 
@@ -59,37 +59,33 @@
             			<form name="reserve" action="index.html" method="get" onsubmit="return validate();">
 
               				<div class="formData">
-                				<label>Prénom</label>
+                				<label for="first">Prénom</label>
                 				<input class="text-control" type="text" id="first" name="first" minlength="2"/>
-								<br/>
               				</div>
 
               				<div class="formData">
-                				<label>Nom</label>
-                				<input class="text-control" type="text" id="last" name="last"/>
-								<br>
+                				<label for="last">Nom</label>
+                				<input class="text-control" type="text" id="last" name="last" minlength="2"/>
               				</div>
 
               				<div class="formData">
-                				<label>E-mail</label>
+                				<label for="email">E-mail</label>
                 				<input class="text-control" type="email" id="email" name="email"/>
-								<br>
               				</div>
 
               				<div class="formData">
-                				<label>Date de naissance</label>
+                				<label for="birthdate">Date de naissance</label>
                 				<input class="text-control" type="date" id="birthdate" name="birthdate"/>
-								<br>
               				</div>
 
               				<div class="formData">
-                				<label>À combien de tournois GameOn avez-vous déjà participé ?</label>
+                				<label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label>
                 				<input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               				</div>
 
-              				<p class="text-label">Dans quelles villes ?</p>
+              				<fieldset class="formData">
+								<legend class="text-label">Dans quelles villes ?</legend>
 
-              				<div class="formData">
                 				<input class="checkbox-input" type="radio" id="location1" name="location" value="New York"/>
                 				<label class="checkbox-label" for="location1">
                   					<span class="checkbox-icon"></span>
@@ -125,7 +121,7 @@
                   					<span class="checkbox-icon"></span>
                   					Portland
 								</label>
-              				</div>
+              				</fieldset>
 
               				<div class="formData">
                 				<input class="checkbox-input" type="checkbox" id="checkbox1"/>
@@ -134,10 +130,10 @@
                   					J'ai lu et j'accepte les conditions d'utilisation.
                 				</label>
 
-                				<input class="checkbox-input" type="checkbox" id="checkbox2" checked/>
+                				<input class="checkbox-input" type="checkbox" id="checkbox2"/>
                 				<label class="checkbox2-label" for="checkbox2">
                   					<span class="checkbox-icon"></span>
-                  					Je souhaite être prévenu des prochains évènements.
+                  					Je souhaite être prévenu·e des prochains évènements.
                 				</label>
               				</div>
 
