@@ -1,4 +1,5 @@
-  
+@use '../base/' as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +13,17 @@ ul, ol {
 
 a {
     text-decoration: none;
-    color: black;
+    color: color(dark);
 }
 
 fieldset {
     min-width: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("background.png");
+    max-width: 1300px;
+    margin: 0 auto;
 }
