@@ -10,6 +10,8 @@
 
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     	<link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet"/>
+
+    	<script type="module" src="./assets/javascript/index.js" defer></script>
   	</head>
   
 	<body>
@@ -56,7 +58,7 @@
 
           			<div class="modal-body">
 
-            			<form name="book" action="index.html" method="get" onsubmit="return validate();">
+            			<form name="book" action="index.html" novalidate id="bookForm">
 
               				<div class="formData">
                 				<label for="first">Prénom</label>
@@ -137,7 +139,7 @@
                 				</label>
               				</div>
 
-              				<input class="btn-submit" type="submit" class="button" value="C'est parti"/>
+              				<button class="btn-submit" id="btn-submit" form="bookForm" type="submit" class="button" value="C'est parti">C'est parti</button>
             			</form>
           			</div>
         		</div>
@@ -147,7 +149,5 @@
     	<footer>
       		<p class="copyrights"> Copyright 2014 - 2021, GameOn Inc.</p>
     	</footer>
-		
-    	<script src="modal.js"></script>
   	</body>
 </html>
