@@ -1,5 +1,5 @@
-function openModal(modalbg) {
-    modalbg.style.display = 'block';
+function openModal(formBackground) {
+    formBackground.style.display = 'block';
 }
 
-export {openModal};
+export default openModal;

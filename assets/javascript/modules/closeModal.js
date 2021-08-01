@@ -1,5 +1,5 @@
-function closeModal(modalbg) {
-    modalbg.style.display = 'none';
+function closeModal(formBackground) {
+    formBackground.style.display = 'none';
 }
 
-export {closeModal}
+export default closeModal;
