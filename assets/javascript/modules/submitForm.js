@@ -7,9 +7,9 @@ function submitForm(bookForm) {
     const isFormValid = validateForm(formContent);
 
     if (isFormValid) {
-        // bookForm.submit(formContent);
+        bookForm.submit(formContent);
     } else {
-        bookForm.addEventListener('submit', (evt) => { evt.preventDefault(); });
+        // bookForm.addEventListener('submit', (evt) => { evt.preventDefault(); });
     }
 }
 
