@@ -6,10 +6,8 @@ function submitForm(bookForm) {
 
     const isFormValid = validateForm(formContent);
 
-    if (isFormValid) {
-        // bookForm.submit(formContent);
-        // eslint-disable-next-line no-console
-        console.log('submit');
+    if (isFormValid.checksum) {
+        return bookForm.submit(formContent);
     }
 }
 

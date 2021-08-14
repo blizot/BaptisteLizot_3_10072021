@@ -8,6 +8,7 @@ function getFormContent(bookForm) {
         birthdate: bookForm.birthdate.value,
         formerContestAmount: Number(bookForm.quantity.value),
         formerCities: getCities(bookForm),
+        newsletter: bookForm.checkbox1.checked,
         conditionsAgreement: bookForm.checkbox2.checked,
     };
 
