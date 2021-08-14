@@ -9,7 +9,7 @@ function validateForm(formContent) {
         birthdate: regexConst.birthdateRegex.test(formContent.birthdate),
         formerContestAmount: Number.isInteger(formContent.formerContestAmount),
         formerCities: validateCities(formContent.formerCities, formContent.formerContestAmount),
-        conditionAgreement: formContent.conditionsAgreement,
+        conditionsAgreement: formContent.conditionsAgreement,
     };
 
     isFormValid.checksum = Object.values(isFormValid).reduce((a, b) => a && b);

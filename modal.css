@@ -10,6 +10,15 @@
 }
 /* Landing Page */
 
+.form--error-message {
+  color: red;
+  font-size: .75rem;
+}
+
+.form--error-border {
+  border-color: red;
+}
+
 body {
   margin: 0;
   display: flex;
