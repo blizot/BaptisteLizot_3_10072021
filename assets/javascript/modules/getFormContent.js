@@ -1,16 +1,17 @@
 import getCities from './getCities.js';
 
 function getFormContent(bookForm) {
-    const firstName = bookForm.firstName.value;
-    const lastName = bookForm.lastName.value;
-    const email = bookForm.email.value;
-    const birthdate = bookForm.birthdate.value;
-    const previousConstestAmount = bookForm.quantity.value;
-    const previousCities = getCities(bookForm);
-    const conditionsAgreement = bookForm.checkbox2.checked;
+    const formContent = {
+        firstName: bookForm.firstName.value,
+        lastName: bookForm.lastName.value,
+        email: bookForm.email.value,
+        birthdate: bookForm.birthdate.value,
+        formerContestAmount: Number(bookForm.quantity.value),
+        formerCities: getCities(bookForm),
+        conditionsAgreement: bookForm.checkbox2.checked,
+    };
 
-    return [firstName, lastName, email, birthdate, previousConstestAmount, previousCities,
-        conditionsAgreement];
+    return formContent;
 }
 
 export default getFormContent;

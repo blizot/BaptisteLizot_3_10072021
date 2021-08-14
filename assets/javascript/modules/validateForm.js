@@ -1,19 +1,20 @@
-import { nameRegex, emailRegex, birthdateRegex } from '../utils/globalConst.js';
+import { regexConst } from '../utils/regexConst.js';
 import validateCities from './validateCities.js';
 
 function validateForm(formContent) {
-    const isFirstNameValid = nameRegex.test(formContent[0]);
-    const isLastNameValid = nameRegex.test(formContent[1]);
-    const isEmailValid = emailRegex.test(formContent[2]);
-    const isBirthdateValid = birthdateRegex.test(formContent[3]);
-    const isPreviousContestAmountValid = Number.isInteger(Number(formContent[4]));
-    const isPreviousCitiesValid = validateCities(formContent[5], Number(formContent[4]));
-    const isConditionAgreementChecked = formContent[6];
+    const isFormValid = {
+        firstName: regexConst.nameRegex.test(formContent.firstName),
+        lastName: regexConst.nameRegex.test(formContent.lastName),
+        email: regexConst.emailRegex.test(formContent.email),
+        birthdate: regexConst.birthdateRegex.test(formContent.birthdate),
+        formerContestAmount: Number.isInteger(formContent.formerContestAmount),
+        formerCities: validateCities(formContent.formerCities, formContent.formerContestAmount),
+        conditionAgreement: formContent.conditionsAgreement,
+    };
 
-    const isFormValid = [isFirstNameValid, isLastNameValid, isEmailValid, isBirthdateValid,
-        isPreviousContestAmountValid, isPreviousCitiesValid, isConditionAgreementChecked];
+    isFormValid.checksum = Object.values(isFormValid).reduce((a, b) => a && b);
 
-    return isFormValid.reduce((a, b) => a && b);
+    return isFormValid;
 }
 
 export default validateForm;
