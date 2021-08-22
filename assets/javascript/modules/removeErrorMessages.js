@@ -1,4 +1,4 @@
-function removeError() {
+function removeErrorMessages() {
     const formErrors = document.getElementsByClassName('form--error-border');
     const formErrorMessages = document.getElementsByClassName('form--error-message');
 
@@ -6,4 +6,4 @@ function removeError() {
     Object.values(formErrorMessages).forEach((e) => e.remove());
 }
 
-export default removeError;
+export default removeErrorMessages;

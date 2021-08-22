@@ -1,14 +1,14 @@
 import { regexConst } from '../utils/regexConst.js';
-import validateCities from './validateCities.js';
+import checkFormCities from './checkFormCities.js';
 
-function validateForm(formContent) {
+function checkFormInputs(formContent) {
     const isFormValid = {
         firstName: regexConst.nameRegex.test(formContent.firstName),
         lastName: regexConst.nameRegex.test(formContent.lastName),
         email: regexConst.emailRegex.test(formContent.email),
         birthdate: regexConst.birthdateRegex.test(formContent.birthdate),
-        formerContestAmount: Number.isInteger(formContent.formerContestAmount),
-        formerCities: validateCities(formContent.formerCities, formContent.formerContestAmount),
+        formerContestAmount: !Number.isNaN(Number.parseInt(formContent.formerContestAmount, 10)),
+        formerCities: checkFormCities(formContent.formerCities, formContent.formerContestAmount),
         conditionsAgreement: formContent.conditionsAgreement,
     };
 
@@ -17,4 +17,4 @@ function validateForm(formContent) {
     return isFormValid;
 }
 
-export default validateForm;
+export default checkFormInputs;

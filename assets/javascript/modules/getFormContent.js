@@ -1,4 +1,4 @@
-import getCities from './getCities.js';
+import getFormCities from './getFormCities.js';
 
 function getFormContent(bookForm) {
     const formContent = {
@@ -7,7 +7,7 @@ function getFormContent(bookForm) {
         email: bookForm.email.value,
         birthdate: bookForm.birthdate.value,
         formerContestAmount: Number(bookForm.quantity.value),
-        formerCities: getCities(bookForm),
+        formerCities: getFormCities(bookForm),
         newsletter: bookForm.checkbox1.checked,
         conditionsAgreement: bookForm.checkbox2.checked,
     };
