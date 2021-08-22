@@ -2,30 +2,30 @@
 
 .modal-btn {
     font-size: 145%;
-    background: #fe142f;
+    background: color(primary);
     display: flex;
     margin: auto;
-    padding: 2em;
+    padding: 2rem;
     color: #fff;
     padding: 0.75rem 2.5rem;
     border-radius: 1rem;
     cursor: pointer;
-  }
-  
-  .modal-btn:hover {
-    background: #3876ac;
-  }
+
+	&:hover {
+		background: color(secondary);
+	}
+}
 
 .button {
-    background: #fe142f;
-    margin-top: 0.5em;
-    padding: 1em;
+    background: color(primary);
+    margin-top: 0.5rem;
+    padding: 1rem;
     color: #fff;
-    border-radius: 15px;
+    border-radius: 1rem;
     cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .button:hover {
-    background: #3876ac;
-  }
+    font-size: 1rem;
+
+	&:hover {
+		background: color(secondary);
+	}
+}

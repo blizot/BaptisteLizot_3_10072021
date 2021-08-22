@@ -1,19 +1,23 @@
 :root {
-  /* ? */
   --font-default: "DM Sans", Arial, Helvetica, sans-serif;
-  /* ? */
   --font-slab: var(--font-default);
   --modal-duration: 0.8s;
 }
-
-/* ? */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 /* Landing Page */
+
+.form--error-message {
+  color: red;
+  font-size: .75rem;
+}
+
+.form--error-border {
+  border-color: red;
+}
 
 body {
   margin: 0;
@@ -25,7 +29,6 @@ body {
   max-width: 1300px;
   margin: 0 auto;
 }
-/* ? */
 
 p {
   margin-bottom: 0;
@@ -36,7 +39,6 @@ img {
   padding-right: 1rem;
 }
 
-/* ? */
 .topnav {
   overflow: hidden;
   margin: 3.5%;
@@ -74,7 +76,6 @@ img {
 .topnav .icon {
   display: none;
 }
-/* ? */
 
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
@@ -98,6 +99,8 @@ img {
   }
 }
 
+
+
  @media screen and (max-width: 540px) {
   .topnav a {display: none;}
   .topnav a.icon {
@@ -106,8 +109,6 @@ img {
     margin-top: -15px;
   }
 } 
-
-
 
 main {
   font-size: 130%;
@@ -216,7 +217,7 @@ input {
   font-size: 20px;
   height: 48px;
 }
-.formData[data-error]::after {
+.formInput[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
   color: #e54858;
@@ -228,10 +229,10 @@ input {
   opacity: 0;
   transition: 0.3s;
 }
-.formData[data-error-visible="true"]::after {
+.formInput[data-error-visible="true"]::after {
   opacity: 1;
 }
-.formData[data-error-visible="true"] .text-control {
+.formInput[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
 /* 
@@ -534,4 +535,3 @@ footer {
     opacity: 1;
   }
 }
-
