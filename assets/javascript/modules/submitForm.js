@@ -8,6 +8,7 @@ function submitForm(bookForm) {
     const isFormValid = checkFormInputs(formContent);
 
     if (isFormValid.checksum) {
+        sessionStorage.setItem('formStatus', 'submitted');
         return bookForm.submit(formContent);
     }
 
