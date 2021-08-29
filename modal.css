@@ -10,6 +10,15 @@
 }
 /* Landing Page */
 
+.form--error-message {
+  color: red;
+  font-size: .75rem;
+}
+
+.form--error-border {
+  border-color: red;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -208,7 +217,7 @@ input {
   font-size: 20px;
   height: 48px;
 }
-.formData[data-error]::after {
+.formInput[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
   color: #e54858;
@@ -220,10 +229,10 @@ input {
   opacity: 0;
   transition: 0.3s;
 }
-.formData[data-error-visible="true"]::after {
+.formInput[data-error-visible="true"]::after {
   opacity: 1;
 }
-.formData[data-error-visible="true"] .text-control {
+.formInput[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
 /* 

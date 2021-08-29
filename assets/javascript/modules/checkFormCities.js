@@ -1,4 +1,4 @@
-function validateCities(cities, previousConstestAmount) {
+function checkFormCities(cities, previousConstestAmount) {
     let citiesCheck = true;
     const citiesCheckArray = [];
 
@@ -13,4 +13,4 @@ function validateCities(cities, previousConstestAmount) {
     return citiesCheck;
 }
 
-export default validateCities;
+export default checkFormCities;
