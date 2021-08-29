@@ -1,0 +1,37 @@
+@use '../base/' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: color(dark);
+}
+
+fieldset {
+    min-width: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+p {
+    margin-bottom: 0;
+    padding: 0.5vw;
+}
+
+  img {
+    padding-right: 1rem;
+}

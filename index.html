@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
   	<head>
-    	<meta charset="utf-8" />
-    	<title>Réservation</title>
+		<!-- Charset & Title -->
+    	<meta charset="UTF-8" />
+    	<title>GameOn — Réservation</title>
 
-    	<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<!-- Google Fonts -->
+    	<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> 
 
-    	<link rel="stylesheet" href="modal.css"/>
-
+		<!-- Style & Icons -->
+		<link rel="stylesheet" href="./assets/style/css/dist/main.min.css"/>
+		<!-- <link rel="stylesheet" href="modal.css"/> -->
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    	<link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet"/>
 
-    	<script type="module" src="./assets/javascript/index.js" type="text/javascript" defer></script>
+		<!-- Javascript -->
+		<script type="module" src="./assets/javascript/index.js" type="text/javascript" defer></script>
+
+		<!-- SEO -->
+		<link rel="canonical" href="#"/>
+        <meta name="author" content="EmbitiousDev"/>
+        <meta name="description" content="GameOn est le troisième projet de la formation Développeur Front-End de OpenClassrooms: créez une landing page avec JavaScript."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="robots" content="noindex, nofollow"/>
+        <meta name="theme-color" content="#9356dc"/>
+
+		<!--Facebook MetaTags-->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="GameOn"/>
+        <meta property="og:site_name" content="GameOn"/>
+        <meta property="og:url" content="#"/>
+        <meta property="og:description" content="GameOn est le troisième projet de la formation Développeur Front-End de OpenClassrooms: créez une landing page avec JavaScript."/>
+        <meta property="og:image" content="./assets/images/logo/gameon.png"/>
+
+        <!--Twitter MetaTags-->
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content="@EmbitiousDev"/>
+        <meta name="twitter:creator" content="@EmbitiousDev"/>
   	</head>
   
 	<body>
     	<header class="topnav" id="myTopnav">
       		<div class="header-logo">
-      			<img alt="logo" src="Logo.png" width="auto" height="auto" />
+      			<img alt="logo" src="./assets/images/logo/gameon.svg" width="auto" height="auto" />
     		</div>
     		
 			<nav class="main-navbar">
@@ -40,14 +66,14 @@
           			</h1>
           			<p class="hero-text">Vous aimez jouer ? Notre prochain évènement gaming est ouvert aux réservations... Places limitées !</p>
 
-          			<button class="btn-signup modal-btn">je m'inscris</button>
+          			<button class="btn-signup modal-btn">Je m'inscris</button>
         		</div>
 
         		<div class="hero-img">
-          			<img src="./bg_img.jpg" alt="img" />
+          			<img src="./assets/images/bg_img.jpg" alt="img" />
         		</div>
 
-        		<!-- <button class="btn-signup modal-btn">je m'inscris</button> -->
+        		<button class="btn-signup modal-btn">Je m'inscris</button>
 			</section>
 
       		<div class="bground">
@@ -60,27 +86,27 @@
             			<form name="book" action="index.html" novalidate id="bookForm">
 
               				<div class="formInput">
-                				<label for="firstName">Prénom</label>
+                				<label for="firstName"class="text-label">Prénom</label>
                 				<input class="text-control" type="text" id="firstName" name="firstName" minlength="2" required/>
               				</div>
 
               				<div class="formInput">
-                				<label for="lastName">Nom</label>
+                				<label for="lastName"class="text-label">Nom</label>
                 				<input class="text-control" type="text" id="lastName" name="lastName" minlength="2"/>
               				</div>
 
               				<div class="formInput">
-                				<label for="email">E-mail</label>
+                				<label for="email"class="text-label">E-mail</label>
                 				<input class="text-control" type="email" id="email" name="email" required/>
               				</div>
 
               				<div class="formInput">
-                				<label for="birthdate">Date de naissance</label>
+                				<label for="birthdate"class="text-label">Date de naissance</label>
                 				<input class="text-control" type="date" id="birthdate" name="birthdate"/>
               				</div>
 
               				<div class="formInput">
-                				<label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label>
+                				<label for="quantity"class="text-label">À combien de tournois GameOn avez-vous déjà participé ?</label>
                 				<input type="number" class="text-control" id="quantity" name="quantity" value="0" min="0" max="99">
               				</div>
 

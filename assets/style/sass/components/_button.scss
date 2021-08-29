@@ -1,0 +1,31 @@
+@use '../components/' as *;
+
+.modal-btn {
+    font-size: 145%;
+    background: color(primary);
+    display: flex;
+    margin: auto;
+    padding: 2rem;
+    color: color(light);
+    padding: 0.75rem 2.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+	&:hover {
+		background: color(secondary);
+	}
+}
+
+.button {
+    background: color(primary);
+    margin-top: 0.5rem;
+    padding: 1rem;
+    color: color(light);
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+
+	&:hover {
+		background: color(secondary);
+	}
+}
