@@ -2,8 +2,6 @@ import insertErrorMessages from './insertErrorMessages.js';
 import removeErrorMessages from './removeErrorMessages.js';
 
 function formErrorMessages(isFormValid) {
-    removeErrorMessages();
-
     if (isFormValid.firstName === false) {
         insertErrorMessages(0, 'Veuillez insérer votre prénom');
     }
@@ -30,6 +28,34 @@ function formErrorMessages(isFormValid) {
 
     if (isFormValid.conditionsAgreement === false) {
         insertErrorMessages(6, 'Veuillez accepter les conditions d\'utilisation');
+    }
+
+    if (isFormValid.firstName === true) {
+        removeErrorMessages(0);
+    }
+
+    if (isFormValid.lastName === true) {
+        removeErrorMessages(1);
+    }
+
+    if (isFormValid.email === true) {
+        removeErrorMessages(2);
+    }
+
+    if (isFormValid.birthdate === true) {
+        removeErrorMessages(3);
+    }
+
+    if (isFormValid.formerContestAmount === true) {
+        removeErrorMessages(4);
+    }
+
+    if (isFormValid.formerCities === true) {
+        removeErrorMessages(5);
+    }
+
+    if (isFormValid.conditionsAgreement === true) {
+        removeErrorMessages(6);
     }
 }
 

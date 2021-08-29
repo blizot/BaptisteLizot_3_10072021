@@ -9,6 +9,7 @@ function submitForm(bookForm) {
 
     if (isFormValid.checksum) {
         sessionStorage.setItem('formStatus', 'submitted');
+
         return bookForm.submit(formContent);
     }
 

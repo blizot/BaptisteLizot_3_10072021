@@ -1,9 +1,11 @@
-function removeErrorMessages() {
-    const formErrors = document.getElementsByClassName('form--error-border');
-    const formErrorMessages = document.getElementsByClassName('form--error-message');
+function removeErrorMessages(i) {
+    const formInputFields = ['firstName', 'lastName', 'email', 'birthdate', 'formerContestAmount', 'formerCities', 'conditionsAgreement'];
+    const formErrorMessage = document.getElementById(`${formInputFields[i]}-error-message`);
 
-    Object.values(formErrors).forEach((e) => e.classList.remove('form--error-border'));
-    Object.values(formErrorMessages).forEach((e) => e.remove());
+    if (formErrorMessage) {
+        formErrorMessage.previousElementSibling.classList.remove('form--error-border');
+        formErrorMessage.remove();
+    }
 }
 
 export default removeErrorMessages;

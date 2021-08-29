@@ -15,6 +15,7 @@ const formStatus = sessionStorage.getItem('formStatus');
 if (formStatus === 'submitted') {
     openModal(formBackground);
     confirmFormSubmit();
+    sessionStorage.clear();
 }
 
 formOpenButton.forEach((btn) => btn.addEventListener('click', () => { openModal(formBackground); }));
