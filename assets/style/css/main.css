@@ -137,7 +137,8 @@ input {
           animation: 0.3s error-fade-in;
 }
 .form--error-border {
-  border: 2px solid #fe142f;
+  border-color: #fe142f;
+  border-width: 2px;
 }
 
 .checkbox-label,
