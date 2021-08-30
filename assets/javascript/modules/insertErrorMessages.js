@@ -1,12 +1,15 @@
-function insertErrorMessages(i, errorMessage) {
+// insert an error message under a specific form input if the entry is invalid
+function insertErrorMessages(formInputIndex, errorMessage) {
     const formInputFields = ['firstName', 'lastName', 'email', 'birthdate', 'formerContestAmount', 'formerCities', 'conditionsAgreement'];
     const formElements = document.getElementsByClassName('formInput');
-    const alreadyError = document.getElementById(`${formInputFields[i]}-error-message`);
+    const alreadyError = document.getElementById(`${formInputFields[formInputIndex]}-error-message`);
 
+    // doesn't add an additional error if one is already displayed
     if (alreadyError) { return; }
 
-    formElements[i].insertAdjacentHTML('beforeend', `<p class="form--error-message" id="${formInputFields[i]}-error-message">${errorMessage}.</p>`);
-    formElements[i].children[1].classList.add('form--error-border');
+    formElements[formInputIndex].insertAdjacentHTML('beforeend',
+        `<p class="form--error-message" id="${formInputFields[formInputIndex]}-error-message">${errorMessage}.</p>`);
+    formElements[formInputIndex].children[1].classList.add('form--error-border');
 }
 
 export default insertErrorMessages;

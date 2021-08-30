@@ -1,6 +1,7 @@
 import insertErrorMessages from './insertErrorMessages.js';
 import removeErrorMessages from './removeErrorMessages.js';
 
+// manages the error messages, inserts or deletes them
 function formErrorMessages(isFormValid) {
     if (isFormValid.firstName === false) {
         insertErrorMessages(0, 'Veuillez insérer votre prénom');
