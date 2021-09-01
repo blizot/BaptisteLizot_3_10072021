@@ -8,11 +8,6 @@ import confirmFormSubmit from './modules/confirmFormSubmit.js';
 const formStatus = sessionStorage.getItem('formStatus');
 const navBurger = document.getElementById('burger');
 const formBackground = document.querySelector('.bground');
-const formOpenButton = document.querySelectorAll('.modal-btn');
-const bookForm = document.forms.book;
-const formTextInput = document.querySelectorAll('input.text-control');
-const formCloseButton = document.getElementById('closeModal');
-const submitFormButton = document.getElementById('submit-form-btn');
 
 // on page load check if the form has been previously submitted
 if (formStatus === 'submitted') {
@@ -21,6 +16,12 @@ if (formStatus === 'submitted') {
     sessionStorage.clear();
 }
 
+const bookForm = document.forms.book;
+const formTextInput = document.querySelectorAll('input.text-control');
+const formOpenButton = document.querySelectorAll('.modal-btn');
+const formCloseButton = document.querySelectorAll('.closeModal');
+const submitFormButton = document.getElementById('submit-form-btn');
+
 // on burger click open the responsive nav menu
 navBurger.addEventListener('click', () => { responsiveNav(); });
 
@@ -28,7 +29,7 @@ navBurger.addEventListener('click', () => { responsiveNav(); });
 formOpenButton.forEach((btn) => btn.addEventListener('click', () => { openModal(formBackground); }));
 
 // on cross click close the form modal
-formCloseButton.addEventListener('click', () => { closeModal(formBackground); });
+formCloseButton.forEach((btn) => btn.addEventListener('click', () => { closeModal(formBackground); }));
 
 // on button click check the form before submitting it
 submitFormButton.addEventListener('click', () => { submitForm(bookForm); });
