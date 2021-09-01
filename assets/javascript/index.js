@@ -1,16 +1,18 @@
+import responsiveNav from './modules/responsiveNav.js';
 import openModal from './modules/openModal.js';
 import closeModal from './modules/closeModal.js';
 import submitForm from './modules/submitForm.js';
 import focusoutInputCheck from './modules/focusoutInputCheck.js';
 import confirmFormSubmit from './modules/confirmFormSubmit.js';
 
+const formStatus = sessionStorage.getItem('formStatus');
+const navBurger = document.getElementById('burger');
 const formBackground = document.querySelector('.bground');
 const formOpenButton = document.querySelectorAll('.modal-btn');
 const bookForm = document.forms.book;
 const formTextInput = document.querySelectorAll('input.text-control');
 const formCloseButton = document.getElementById('closeModal');
 const submitFormButton = document.getElementById('submit-form-btn');
-const formStatus = sessionStorage.getItem('formStatus');
 
 // on page load check if the form has been previously submitted
 if (formStatus === 'submitted') {
@@ -18,6 +20,9 @@ if (formStatus === 'submitted') {
     confirmFormSubmit();
     sessionStorage.clear();
 }
+
+// on burger click open the responsive nav menu
+navBurger.addEventListener('click', () => { responsiveNav(); });
 
 // on button click open the form modal
 formOpenButton.forEach((btn) => btn.addEventListener('click', () => { openModal(formBackground); }));
