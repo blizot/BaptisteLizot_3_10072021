@@ -1,11 +1,10 @@
 import { regexConst } from '../utils/regexConst.js';
-import checkFormCities from './checkFormCities.js';
 
 // check the form content
 function checkFormInputs(formContent) {
     /* firstName, lastName, email, and birthdate are checked against a Regex
     formerContest amount must be a number
-    formerCities must be filled if formerContestAmount is greater than 0
+    a city must be selected
     conditionsAgreement must be checked by the user: no default check to comply with GDPR */
     const isFormValid = {
         firstName: regexConst.nameRegex.test(formContent.firstName),
@@ -13,7 +12,7 @@ function checkFormInputs(formContent) {
         email: regexConst.emailRegex.test(formContent.email),
         birthdate: regexConst.birthdateRegex.test(formContent.birthdate),
         formerContestAmount: !Number.isNaN(Number.parseInt(formContent.formerContestAmount, 10)),
-        formerCities: checkFormCities(formContent.formerCities, formContent.formerContestAmount),
+        city: formContent.city.length > 0,
         conditionsAgreement: formContent.conditionsAgreement,
     };
 

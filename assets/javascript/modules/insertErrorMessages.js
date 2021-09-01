@@ -1,6 +1,6 @@
 // insert an error message under a specific form input if the entry is invalid
 function insertErrorMessages(formInputIndex, errorMessage) {
-    const formInputFields = ['firstName', 'lastName', 'email', 'birthdate', 'formerContestAmount', 'formerCities', 'conditionsAgreement'];
+    const formInputFields = ['firstName', 'lastName', 'email', 'birthdate', 'formerContestAmount', 'city', 'conditionsAgreement'];
     const formElements = document.getElementsByClassName('formInput');
     const alreadyError = document.getElementById(`${formInputFields[formInputIndex]}-error-message`);
 
