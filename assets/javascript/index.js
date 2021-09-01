@@ -32,7 +32,9 @@ formOpenButton.forEach((btn) => btn.addEventListener('click', () => { openModal(
 formCloseButton.forEach((btn) => btn.addEventListener('click', () => { closeModal(formBackground); }));
 
 // on button click check the form before submitting it
-submitFormButton.addEventListener('click', () => { submitForm(bookForm); });
+if (submitFormButton !== null) {
+    submitFormButton.addEventListener('click', () => { submitForm(bookForm); });
+}
 
 // on focus out check the form input
 formTextInput.forEach((input) => input.addEventListener('focusout', () => { focusoutInputCheck(input); }));

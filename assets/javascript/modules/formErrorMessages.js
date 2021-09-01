@@ -23,8 +23,8 @@ function formErrorMessages(isFormValid) {
         insertErrorMessages(4, 'Veuillez renseigner le nombre de concours auxquels vous avez participé');
     }
 
-    if (isFormValid.formerCities === false) {
-        insertErrorMessages(5, 'Veuillez sélectioner les villes dans lesquelles vous avez participé à nos concours');
+    if (isFormValid.city === false) {
+        insertErrorMessages(5, 'Veuillez sélectioner la ville dans laquelles vous souhaitez participer à notre concours');
     }
 
     if (isFormValid.conditionsAgreement === false) {
@@ -51,7 +51,7 @@ function formErrorMessages(isFormValid) {
         removeErrorMessages(4);
     }
 
-    if (isFormValid.formerCities === true) {
+    if (isFormValid.city === true) {
         removeErrorMessages(5);
     }
 
