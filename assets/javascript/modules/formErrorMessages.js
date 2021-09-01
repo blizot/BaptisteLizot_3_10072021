@@ -24,7 +24,7 @@ function formErrorMessages(isFormValid) {
     }
 
     if (isFormValid.city === false) {
-        insertErrorMessages(5, 'Veuillez sélectioner la ville dans laquelles vous souhaitez participer à notre concours');
+        insertErrorMessages(5, 'Veuillez sélectioner la ville dans laquelle vous souhaitez participer à notre concours');
     }
 
     if (isFormValid.conditionsAgreement === false) {
