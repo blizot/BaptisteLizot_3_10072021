@@ -239,6 +239,7 @@ input {
   background: #fe142f;
   display: block;
   margin: 0 auto;
+  margin-top: 0.5rem;
   border-radius: 0.5rem;
   font-size: 1rem;
   padding: 0.75rem 5rem;
