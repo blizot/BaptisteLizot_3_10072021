@@ -10,9 +10,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> 
 
+        <!--FontAwesome-->
+        <script src="https://kit.fontawesome.com/28350a576b.js" crossorigin="anonymous" defer></script>
+
         <!-- Style & Icons -->
         <link rel="stylesheet" href="./assets/style/css/dist/main.min.css"/>
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/> -->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/icon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/icon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/icon/favicon-16x16.png">
@@ -56,6 +58,7 @@
                 <a href="#"><span>À propos</span></a>
                 <a href="#"><span>Contact</span></a>
                 <a href="#"><span>Évènements passés</span></a>
+                <a href="#" class="icon" id="burger">
                     <i class="fa fa-bars"></i>
                 </a>
             </nav>
@@ -83,7 +86,7 @@
             <div class="bground">
                 <div class="content">
                     
-                    <span class="close" id="closeModal"></span>
+                    <span class="close closeModal"></span>
 
                     <div class="modal-body" id="form-content">
 
@@ -117,40 +120,58 @@
                             <fieldset class="formInput">
                                 <legend class="text-label">Dans quelles villes ?</legend>
 
-                                <input class="checkbox-input" type="checkbox" id="location0" name="location" value="New York"/>
+                                <input class="checkbox-input" type="checkbox" id="location0" name="location" value="Paris"/>
                                 <label class="checkbox-label" for="location0">
                                     <span class="checkbox-icon"></span>
-                                    New York
+                                    Paris
                                 </label>
 
-                                <input class="checkbox-input" type="checkbox" id="location1" name="location" value="San Francisco"/>
+                                <input class="checkbox-input" type="checkbox" id="location1" name="location" value="Marseille"/>
                                 <label class="checkbox-label" for="location1">
                                     <span class="checkbox-icon"></span>
-                                    San Francisco
+                                    Marseille
                                 </label>
 
-                                <input class="checkbox-input" type="checkbox" id="location2" name="location" value="Seattle"/>
+                                <input class="checkbox-input" type="checkbox" id="location2" name="location" value="Lyon"/>
                                 <label class="checkbox-label" for="location2">
                                     <span class="checkbox-icon"></span>
-                                    Seattle
+                                    Lyon
                                 </label>
 
-                                <input class="checkbox-input" type="checkbox" id="location3" name="location" value="Chicago"/>
+                                <input class="checkbox-input" type="checkbox" id="location3" name="location" value="Toulouse"/>
                                 <label class="checkbox-label" for="location3">
                                     <span class="checkbox-icon"></span>
-                                    Chicago
+                                    Toulouse
                                 </label>
 
-                                <input class="checkbox-input" type="checkbox" id="location4" name="location" value="Boston"/>
+                                <input class="checkbox-input" type="checkbox" id="location4" name="location" value="Nice"/>
                                 <label class="checkbox-label" for="location4">
                                     <span class="checkbox-icon"></span>
-                                    Boston
+                                    Nice
                                 </label>
 
-                                <input class="checkbox-input" type="checkbox" id="location5" name="location" value="Portland"/>
+                                <input class="checkbox-input" type="checkbox" id="location5" name="location" value="Nantes"/>
                                 <label class="checkbox-label" for="location5">
                                     <span class="checkbox-icon"></span>
-                                    Portland
+                                    Nantes
+                                </label>
+
+                                <input class="checkbox-input" type="checkbox" id="location6" name="location" value="Montpellier"/>
+                                <label class="checkbox-label" for="location6">
+                                    <span class="checkbox-icon"></span>
+                                    Montpellier
+                                </label>
+
+                                <input class="checkbox-input" type="checkbox" id="location7" name="location" value="Strasbourg"/>
+                                <label class="checkbox-label" for="location7">
+                                    <span class="checkbox-icon"></span>
+                                    Strasbourg
+                                </label>
+
+                                <input class="checkbox-input" type="checkbox" id="location8" name="location" value="Bordeaux"/>
+                                <label class="checkbox-label" for="location8">
+                                    <span class="checkbox-icon"></span>
+                                    Bordeaux
                                 </label>
                             </fieldset>
 
